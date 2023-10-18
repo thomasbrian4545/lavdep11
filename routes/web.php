@@ -59,3 +59,25 @@ Route::get('first', function () {
     $mahasiswa = Mahasiswa::first();
     return view('mahasiswa', compact('mahasiswa'));
 });
+
+
+// Method all() dan get()
+Route::get('methodAll', function () {
+    $mahasiswas = Mahasiswa::all();
+    return view('mahasiswas', compact('mahasiswas'));
+});
+
+Route::get('methodGet', function () {
+    $mahasiswas = Mahasiswa::get();
+    return view('mahasiswas', compact('mahasiswas'));
+});
+
+Route::get('all-column', function () {
+    $result = Mahasiswa::all(['nama', 'ipk']);
+    dump($result->toArray());
+});
+
+Route::get('get-column', function () {
+    $result = Mahasiswa::get(['nama', 'ipk']);
+    dump($result->toArray());
+});
