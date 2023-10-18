@@ -86,3 +86,26 @@ Route::get('select', function () {
     $result = Mahasiswa::select('nama', 'ipk', 'nim')->get();
     dump($result->toArray());
 });
+
+// Method orderBy()
+Route::get('order-by-1', function () {
+    $mahasiswas = Mahasiswa::orderBy('ipk')->get();
+    return view('mahasiswas', compact('mahasiswas'));
+});
+
+Route::get('order-by-2', function () {
+    $mahasiswas = Mahasiswa::orderBy('ipk', 'desc')->get();
+    return view('mahasiswas', compact('mahasiswas'));
+});
+
+// Method orderByDesc()
+Route::get('order-by-desc', function () {
+    $mahasiswas = Mahasiswa::orderByDesc('ipk')->get();
+    return view('mahasiswas', compact('mahasiswas'));
+});
+
+// Method inRandomOrder()
+Route::get('in-random-order', function () {
+    $mahasiswas = Mahasiswa::inRandomOrder()->get();
+    return view('mahasiswas', compact('mahasiswas'));
+});
