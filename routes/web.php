@@ -45,7 +45,12 @@ Route::get('/insert-mahasiswa-3', function () {
     return "Penambahan mahasiswa berhasil";
 });
 
+// Route::get('all', function () {
+//     $mahasiswas = Mahasiswa::all();
+//     dump($mahasiswas->toArray());
+// });
+
 Route::get('all', function () {
     $mahasiswas = Mahasiswa::all();
-    dump($mahasiswas->toArray());
+    return view('mahasiswas', compact('mahasiswas'));
 });
