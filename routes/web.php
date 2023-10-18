@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Models\Mahasiswa;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,4 +16,14 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
+});
+
+Route::get('/insert-mahasiswa-1', function () {
+    $mahasiswa = new Mahasiswa;
+    $mahasiswa->nim = '19003036';
+    $mahasiswa->nama = 'Sari Citra Lestari';
+    $mahasiswa->tanggal_lahir = '2001-12-31';
+    $mahasiswa->ipk = 3.62;
+    $mahasiswa->save();
+    return "Penambahan mahasiswa berhasil";
 });
