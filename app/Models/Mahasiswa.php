@@ -9,4 +9,6 @@ class Mahasiswa extends Model
 {
     use HasFactory;
     protected $table = 'data_mahasiswa';
+
+    public $timestamps = false;
 }

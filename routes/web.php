@@ -27,3 +27,13 @@ Route::get('/insert-mahasiswa-1', function () {
     $mahasiswa->save();
     return "Penambahan mahasiswa berhasil";
 });
+
+Route::get('/insert-mahasiswa-2', function () {
+    $mahasiswa = new Mahasiswa;
+    $mahasiswa->nim = '19021044';
+    $mahasiswa->nama = 'Rudi Permana';
+    $mahasiswa->tanggal_lahir = '2000-08-22';
+    $mahasiswa->ipk = 2.99;
+    $mahasiswa->save();
+    return "Penambahan mahasiswa berhasil";
+});
