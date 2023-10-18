@@ -10,10 +10,16 @@ class Mahasiswa extends Model
     use HasFactory;
     protected $table = 'data_mahasiswa';
 
-    public $timestamps = false;
+    //public $timestamps = false;
 
     protected $attributes = [
         'nama' => 'Fulan',
         'tanggal_lahir' => '1990-01-01',
     ];
+
+    protected $casts = [
+        'tanggal_lahir' => 'datetime',
+    ];
+
+    protected $guarded = [];
 }
