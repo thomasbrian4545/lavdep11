@@ -54,3 +54,8 @@ Route::get('all', function () {
     $mahasiswas = Mahasiswa::all();
     return view('mahasiswas', compact('mahasiswas'));
 });
+
+Route::get('first', function () {
+    $mahasiswa = Mahasiswa::first();
+    return view('mahasiswa', compact('mahasiswa'));
+});
