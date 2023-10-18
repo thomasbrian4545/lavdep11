@@ -47,5 +47,5 @@ Route::get('/insert-mahasiswa-3', function () {
 
 Route::get('all', function () {
     $mahasiswas = Mahasiswa::all();
-    dump($mahasiswas);
+    dump($mahasiswas->toArray());
 });
