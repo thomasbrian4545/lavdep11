@@ -44,3 +44,8 @@ Route::get('/insert-mahasiswa-3', function () {
     $mahasiswa->save();
     return "Penambahan mahasiswa berhasil";
 });
+
+Route::get('all', function () {
+    $mahasiswas = Mahasiswa::all();
+    dump($mahasiswas);
+});
