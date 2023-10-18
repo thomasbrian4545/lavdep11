@@ -109,3 +109,9 @@ Route::get('in-random-order', function () {
     $mahasiswas = Mahasiswa::inRandomOrder()->get();
     return view('mahasiswas', compact('mahasiswas'));
 });
+
+// Method first()
+Route::get('first', function () {
+    $mahasiswa = Mahasiswa::first();
+    return view('mahasiswa', compact('mahasiswa'));
+});
