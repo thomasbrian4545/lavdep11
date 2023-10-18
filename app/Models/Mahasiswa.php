@@ -11,4 +11,9 @@ class Mahasiswa extends Model
     protected $table = 'data_mahasiswa';
 
     public $timestamps = false;
+
+    protected $attributes = [
+        'nama' => 'Fulan',
+        'tanggal_lahir' => '1990-01-01',
+    ];
 }

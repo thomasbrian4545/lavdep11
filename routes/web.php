@@ -37,3 +37,10 @@ Route::get('/insert-mahasiswa-2', function () {
     $mahasiswa->save();
     return "Penambahan mahasiswa berhasil";
 });
+
+Route::get('/insert-mahasiswa-3', function () {
+    $mahasiswa = new Mahasiswa;
+    $mahasiswa->nim = '19002035';
+    $mahasiswa->save();
+    return "Penambahan mahasiswa berhasil";
+});
